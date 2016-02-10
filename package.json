@@ -28,6 +28,6 @@
   },
   "engines": {
     "node": "5.5.x"
-  }
+  },
   "description": "connect-movie-prototype-backend"
 }
