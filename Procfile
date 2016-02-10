@@ -1,1 +1,1 @@
-Procfile
+web: slc run 
