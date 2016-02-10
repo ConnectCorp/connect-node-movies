@@ -1,0 +1,52 @@
+{
+  "name": "Theater",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "geopoint",
+      "required": true,
+      "index": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "zip": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": true
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

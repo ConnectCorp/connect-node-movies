@@ -1,0 +1,39 @@
+{
+  "name": "Movie",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "trailerUrl": {
+      "type": "string"
+    },
+    "posterUrl": {
+      "type": "string"
+    },
+    "infoPageUrl": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "index": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysqlDs": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "mysql://localhost:3306/movies",
+    "database": "movies",
+    "password": "movies",
+    "name": "mysqlDs",
+    "user": "movies",
+    "connector": "mysql"
+  }
+}

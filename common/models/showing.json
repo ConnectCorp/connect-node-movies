@@ -1,0 +1,36 @@
+{
+  "name": "Showing",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "movie": {
+      "type": "belongsTo",
+      "model": "Movie",
+      "foreignKey": ""
+    },
+    "theater": {
+      "type": "belongsTo",
+      "model": "Theater",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

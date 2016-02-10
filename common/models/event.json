@@ -1,0 +1,50 @@
+{
+  "name": "Event",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "deadline": {
+      "type": "date",
+      "required": true
+    },
+    "buyInAmount": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "showing": {
+      "type": "belongsTo",
+      "model": "Showing",
+      "foreignKey": ""
+    },
+    "person": {
+      "type": "hasOne",
+      "model": "Person",
+      "foreignKey": ""
+    },
+    "invites": {
+      "type": "hasMany",
+      "model": "Invite",
+      "foreignKey": ""
+    },
+    "people": {
+      "type": "hasMany",
+      "model": "Person",
+      "foreignKey": "",
+      "through": "Invite"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

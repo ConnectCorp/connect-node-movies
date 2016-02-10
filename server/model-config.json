@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Theater": {
+    "dataSource": "mysqlDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Movie": {
+    "dataSource": "mysqlDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Event": {
+    "dataSource": "mysqlDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Showing": {
+    "dataSource": "mysqlDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Person": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "Invite": {
+    "dataSource": "mysqlDs",
+    "public": true
+  }
+}

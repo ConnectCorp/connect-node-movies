@@ -1,0 +1,12 @@
+{
+  "ids": {
+    "ManagerHost": 2,
+    "LoadBalancer": 1
+  },
+  "models": {
+    "ManagerHost": {
+      "2476303b-5d6a-4ae1-b315-80d3ab0c322c": "{\"id\":\"2476303b-5d6a-4ae1-b315-80d3ab0c322c\",\"host\":\"localhost\",\"port\":8701,\"actions\":[\"delete\",\"edit\",\"env-set\",\"env-get\",\"stop\",\"restart\",\"cluster-restart\",\"license-push\"],\"protocol\":\"http\",\"created\":1455059679325,\"error\":null,\"errorType\":null,\"app\":{\"name\":\"connect-movie-prototype-backend\",\"version\":null,\"port\":3001},\"processes\":{\"pids\":[{\"parentPid\":11825,\"pid\":11826,\"workerId\":1,\"listeningSockets\":[{\"addressType\":4,\"address\":\"0.0.0.0\",\"port\":3001}],\"isTrackingObjects\":false,\"isProfiling\":false,\"isTracing\":false,\"debugger\":{\"running\":false,\"port\":null},\"watchdogTimeout\":0,\"watchdogStallout\":0,\"isSnapshotting\":false,\"startTime\":\"2016-02-09T23:17:01.564Z\",\"stopTime\":null,\"stopReason\":\"\",\"id\":3,\"serviceInstanceId\":1},{\"parentPid\":11796,\"pid\":11825,\"workerId\":0,\"listeningSockets\":[],\"isTrackingObjects\":false,\"isProfiling\":false,\"isTracing\":false,\"debugger\":{\"running\":false,\"port\":null},\"watchdogTimeout\":0,\"watchdogStallout\":0,\"isSnapshotting\":false,\"startTime\":\"2016-02-09T23:17:01.346Z\",\"stopTime\":null,\"stopReason\":\"\",\"id\":4,\"serviceInstanceId\":1}]},\"$$hashKey\":\"object:464\",\"isHostProblem\":true}"
+    },
+    "LoadBalancer": {}
+  }
+}

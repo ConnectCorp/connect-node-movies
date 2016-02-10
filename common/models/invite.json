@@ -1,0 +1,37 @@
+{
+  "name": "Invite",
+  "plural": "Invites",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "number",
+      "required": true
+    },
+    "paymentConfirmationCode": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "event": {
+      "type": "belongsTo",
+      "model": "Event",
+      "foreignKey": ""
+    },
+    "person": {
+      "type": "belongsTo",
+      "model": "Person",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
