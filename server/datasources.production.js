@@ -8,10 +8,6 @@ var mysqlUrl = url.parse(process.env.MYSQL_URL);
 var auth     = mysqlUrl.auth.split(':');
 
 module.exports = {
-  "db":      {
-    "name":      "db",
-    "connector": "memory"
-  },
   "mysqlDs": {
     "host":      mysqlUrl.host,
     "port":      mysqlUrl.port,
