@@ -12,7 +12,7 @@ module.exports = {
     "host":      mysqlUrl.hostname,
     "port":      mysqlUrl.port,
     //"url":       process.env.MYSQL_URL,
-    "database":  mysqlUrl.pathname,
+    "database":  mysqlUrl.pathname.substring(1),
     "password":  auth[1],
     "name":      "mysqlDs",
     "user":      auth[0],
