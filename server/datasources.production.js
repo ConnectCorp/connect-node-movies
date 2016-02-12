@@ -9,13 +9,13 @@ var auth     = mysqlUrl.auth.split(':');
 
 module.exports = {
   "mysqlDs": {
-    //"host":      mysqlUrl.host,
-    //"port":      mysqlUrl.port,
-    "url":       process.env.MYSQL_URL,
-    //"database":  mysqlUrl.pathname,
-    //"password":  auth[1],
+    "host":      mysqlUrl.hostname,
+    "port":      mysqlUrl.port,
+    //"url":       process.env.MYSQL_URL,
+    "database":  mysqlUrl.pathname,
+    "password":  auth[1],
     "name":      "mysqlDs",
-    //"user":      auth[0],
+    "user":      auth[0],
     "connector": "mysql"
   }
 }
