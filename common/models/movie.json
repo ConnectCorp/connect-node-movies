@@ -13,16 +13,6 @@
       "required": true,
       "index": false
     },
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "trailerUrl": {
-      "type": "string"
-    },
-    "posterUrl": {
-      "type": "string"
-    },
     "infoPageUrl": {
       "type": "string"
     },
@@ -30,6 +20,16 @@
       "type": "string",
       "required": true,
       "index": true
+    },
+    "trailerUrl": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "posterUrl": {
+      "type": "string"
     }
   },
   "validations": [],

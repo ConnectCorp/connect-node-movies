@@ -9,7 +9,7 @@ module.exports = function (app) {
   }
 
   app.use('/api', jwt({
-    secret:          secret,
+    secret:          secret.replace(/\\n/g, "\n"),
     requestProperty: 'jwt'
   }));
 
