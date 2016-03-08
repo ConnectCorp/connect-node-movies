@@ -17,17 +17,19 @@ module.exports = function (app) {
 
     var User = app.models.Person;
 
+    var email = req.jwt.sub + '@movies.connect.com';
+
     var data = {
       username:      req.jwt.sub,
-      email:         req.jwt.email || req.jwt.sub + '@movies.connect.com',
+      email:         req.jwt.email || email,
       pictureUrl:    req.jwt.picture || '',
-      name:          req.jwt.name || '',
+      name:          req.jwt.name || email,
       phoneNumber:   req.jwt.phone || '',
       emailVerified: true,
       password:      secret
     };
 
-    User.findOrCreate({ username: data.username }, data, function (err, user) {
+    User.findOrCreate({where: {username: data.username}}, data, function (err, user) {
       if (err) {
         return next(err);
       }
