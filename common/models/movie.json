@@ -2,17 +2,11 @@
   "name": "Movie",
   "base": "PersistedModel",
   "strict": false,
-  "idInjection": false,
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true,
-      "index": false
-    },
     "infoPageUrl": {
       "type": "string"
     },

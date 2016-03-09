@@ -2,7 +2,7 @@
   "name": "Theater",
   "base": "PersistedModel",
   "strict": false,
-  "idInjection": false,
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
@@ -37,12 +37,6 @@
       "id": false,
       "required": true,
       "index": true
-    },
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true,
-      "index": false
     }
   },
   "validations": [],

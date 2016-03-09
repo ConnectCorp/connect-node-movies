@@ -17,11 +17,11 @@ module.exports = function (app) {
 
     var User = app.models.Person;
 
-    var email = req.jwt.sub + '@movies.connect.com';
+    var email = req.jwt.email || req.jwt.sub + '@movies.connect.com';
 
     var data = {
-      username:      req.jwt.sub,
-      email:         req.jwt.email || email,
+      username:      "" + req.jwt.sub,
+      email:         email,
       pictureUrl:    req.jwt.picture || '',
       name:          req.jwt.name || email,
       phoneNumber:   req.jwt.phone || '',
