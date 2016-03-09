@@ -9,7 +9,6 @@
   "properties": {
     "date": {
       "type": "string",
-      "id": true,
       "required": true
     }
   },
