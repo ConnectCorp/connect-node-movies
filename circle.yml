@@ -1,5 +1,7 @@
 ---
 machine:
+  services:
+    - docker
   timezone: America/Los_Angeles
   node:
     version: 0.12.9
