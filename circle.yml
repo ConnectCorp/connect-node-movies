@@ -6,6 +6,10 @@ machine:
   node:
     version: 0.12.9
 
+dependencies:
+  pre:
+    - curl -SL https://github.com/grammarly/rocker/releases/download/1.1.0/rocker-1.1.0-linux_amd64.tar.gz | sudo tar -xzC /usr/local/bin && sudo chmod +x /usr/local/bin/rocker
+
 deployment:
   staging:
     branch: develop
