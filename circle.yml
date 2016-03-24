@@ -1,0 +1,20 @@
+---
+machine:
+  timezone: America/Los_Angeles
+  node:
+    version: 0.12.9
+
+deployment:
+  staging:
+    branch: develop
+    commands:
+      - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
+      - rocker build . --push -v Version=latest
+
+  production:
+    branch: master
+    commands:
+      - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
+      - rocker build . --push -v Version=master
+
+
