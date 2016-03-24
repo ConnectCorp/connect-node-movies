@@ -15,7 +15,7 @@ deployment:
     branch: develop
     commands:
       - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
-      - rocker build --push --var Version=master .
+      - rocker build --push --var Version=latest .
 
   production:
     branch: master
