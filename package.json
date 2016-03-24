@@ -6,7 +6,8 @@
     "prestart": "node server/automigrate.js",
     "start": "node .",
     "pretest": "jshint .",
-    "posttest": "nsp check"
+    "posttest": "nsp check",
+    "test": "exit 0"
   },
   "dependencies": {
     "async": "^1.5.2",
