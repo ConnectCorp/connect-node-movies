@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "mysqlDs"
+    "dataSource": "mysqlDs",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "mysqlDs",
