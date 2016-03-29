@@ -12,6 +12,7 @@ module.exports = function (app) {
     next();
   });
 
-  app.use(morgan(':trace-id - :remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"'));
+  app.use(morgan(':trace-id - :remote-addr - :remote-user [:date[clf]] ":method ' +
+    ':url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"'));
 
 };

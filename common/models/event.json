@@ -24,19 +24,19 @@
       "foreignKey": ""
     },
     "person": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "Person",
       "foreignKey": ""
     },
     "invites": {
       "type": "hasMany",
       "model": "Invite",
-      "foreignKey": ""
+      "foreignKey": "eventId"
     },
     "people": {
       "type": "hasMany",
       "model": "Person",
-      "foreignKey": "",
+      "foreignKey": "eventId",
       "through": "Invite"
     }
   },

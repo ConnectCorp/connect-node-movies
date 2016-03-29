@@ -16,12 +16,13 @@ module.exports = function (app) {
   function login(email, next) {
     User.login({
       email: email,
-      password: secret
+      password: base64secret
     }, next);
   }
 
   app.use('/api', connectMiddleware({
     secret: secret,
+    getUserRoute: '/users/:id',
     baseUri: process.env.CONNECT_AUTH_BASE_URL
   }));
 
@@ -34,7 +35,7 @@ module.exports = function (app) {
       },
       function (t, next) {
         tx = t;
-        req.user.data.id = req.user.data;
+        req.user = req.user.data;
         User.findOne({where: {username: req.user.userId}}, {transaction: tx}, next);
       },
       function (user, next) {
@@ -48,8 +49,8 @@ module.exports = function (app) {
         var data = {
           username: req.user.userId,
           email: email,
-          pictureUrl: req.user.userId.pictureUrl,
-          name: req.user.userId.name,
+          pictureUrl: req.user.pictureUrl,
+          name: req.user.name,
           emailVerified: true,
           password: base64secret
         };

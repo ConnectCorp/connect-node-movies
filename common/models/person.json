@@ -16,6 +16,10 @@
     },
     "phoneNumber": {
       "type": "string"
+    },
+    "username": {
+      "type": "string",
+      "index": { "unique": true }
     }
   },
   "validations": [],

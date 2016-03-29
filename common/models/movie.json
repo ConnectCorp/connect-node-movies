@@ -27,7 +27,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "showings": {
+      "type": "hasMany",
+      "model": "Showing",
+      "foreignKey": "movieId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

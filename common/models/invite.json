@@ -20,12 +20,12 @@
     "event": {
       "type": "belongsTo",
       "model": "Event",
-      "foreignKey": ""
+      "foreignKey": "eventId"
     },
     "person": {
       "type": "belongsTo",
       "model": "Person",
-      "foreignKey": ""
+      "foreignKey": "personId"
     }
   },
   "acls": [],
