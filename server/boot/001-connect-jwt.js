@@ -39,10 +39,6 @@ module.exports = function (app) {
         User.findOne({where: {username: req.user.userId}}, {transaction: tx}, next);
       },
       function (user, next) {
-        if (user) {
-          return next(null, user);
-        }
-
         var email = req.user.emailAccounts && req.user.emailAccounts.lengh > 0 && req.user.emailAccounts[0].address;
         email = email || req.user.userId + '@movies.connect.com';
 
@@ -54,6 +50,10 @@ module.exports = function (app) {
           emailVerified: true,
           password: base64secret
         };
+
+        if (user) {
+          return user.updateAttributes(data, {transaction: tx}, next);
+        }
 
         User.create(data, {transaction: tx}, next);
       },
