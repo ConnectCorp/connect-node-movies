@@ -11,16 +11,9 @@ dependencies:
     - curl -SL https://github.com/grammarly/rocker/releases/download/1.1.0/rocker-1.1.0-linux_amd64.tar.gz | sudo tar -xzC /usr/local/bin && sudo chmod +x /usr/local/bin/rocker
 
 deployment:
-  staging:
-    branch: develop
+  all:
     commands:
       - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
       - rocker build --push --var Version=latest .
-
-  production:
-    branch: master
-    commands:
-      - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
-      - rocker build --push --var Version=master .
 
 
